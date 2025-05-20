@@ -12,5 +12,9 @@
   "dependencies": {
     "playwright": "^1.15.1",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.20"
   }
 }

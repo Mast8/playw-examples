@@ -17,10 +17,10 @@
     await page.fill('input[name="acct"]', email);
     await page.fill('input[name="pw"]', password);
 
-    //const signInButton = page.locator('button[type="submit"]').first();
-    //await click('button[type="submit"]');
-    await page.click('button[type="submit"]');
+    
+    await page.click('input[value="login"]')
 
+   
     try {
       const signInError = await page.waitForSelector(
         ".ui-message-error, .inputError",
