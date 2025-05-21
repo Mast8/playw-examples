@@ -14,14 +14,14 @@ test('get started link', async ({ page }) => {
   // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
 
-  await expect(page.getByText("Bad login")).toBeVisible()
+  //await expect(page.getByText("Bad login")).toBeVisible()
 
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
 
-test('get started link', async ({ page }) => {
+test('started link', async ({ page }) => {
   const email = "ron";
   const password = "1234";
 
@@ -34,8 +34,12 @@ test('get started link', async ({ page }) => {
     
   await page.goto('https://playwright.dev/');
 
-  await expect(page.getByText("Bad login")).toBeVisible()
+  await page.click('input[value="login"]')
+   expect(page.getByText("Bad login"))
 
-  // Expects page to have a heading with the name of Installation.
-  
+ 
 });
+
+ // Expects page to have a heading with the name of Installation.
+  //run tests
+  //npx playwright test

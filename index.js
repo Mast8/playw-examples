@@ -20,7 +20,6 @@
     
     await page.click('input[value="login"]')
 
-   
     try {
       const signInError = await page.waitForSelector(
         ".ui-message-error, .inputError",
